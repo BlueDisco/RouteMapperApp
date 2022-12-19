@@ -1,6 +1,6 @@
 /*
-  Welcome to RouteMapperHuang where I provide an easy-to-use to route maker with a slightly inaccurate location tracking service. 
-  Loading up the app, you are presented with a map and a single button on your screen. What to do? You press the button and it brings you to your current location.
+  This app serves as a route maker with a slightly inaccurate location tracking service. 
+  Loading up the app, you are presented with a map and a single button on your screen. You press the button and it brings you to your current location.
   Suddenly, some information pops up on the top and another button appears. The start conditions turns true which makes these components pop up. The green marker labeled "Start"
   pops up at where you are standing. A timer is ticking on the top and the distance and speed displays 0. You try moving and these values don't update, but suddenly, a line pops up
   on the screen and these values both update (after walking around 10 meters from the start). 
@@ -26,8 +26,6 @@ import {
   Modal,
 } from "react-native";
 import MapView from "react-native-maps";
-
-//use that toFix method Gio was talking about
 
 export default function MapScreen({ route, navigation }) {
   const [userCoords, setUserCoords] = useState()
