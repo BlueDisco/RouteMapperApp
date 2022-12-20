@@ -1,21 +1,3 @@
-/*
-  This app serves as a route maker with a slightly inaccurate location tracking service. 
-  Loading up the app, you are presented with a map and a single button on your screen. You press the button and it brings you to your current location.
-  Suddenly, some information pops up on the top and another button appears. The start conditions turns true which makes these components pop up. The green marker labeled "Start"
-  pops up at where you are standing. A timer is ticking on the top and the distance and speed displays 0. You try moving and these values don't update, but suddenly, a line pops up
-  on the screen and these values both update (after walking around 10 meters from the start). 
-
-  After running a while, you decide to stop the route. Pressing these buttons always zooms you in to your current location.
-  A red marker labeled "End" appears. The information on the top disappears and a summary button appears on the bottom. 
-  Some conditions must have turned true to allow this happen. A modal of your run's summary appears when you press this button. 
-  Pressing the red button again deletes your route and resets everything back to zero. Pressing the green button starts an entire new route with a new marker and all the info at 
-  default values. 
-
-  Some caveats:
-  -The user location sometimes goes haywire even though there isn't no movement, causing it to go haywire and showing that by drawing out of place polylines. (Same goes for distance and speed)
-  -If the time goes too high (in the many hours), it will go off the edge of the screen.
-  -The average speed might not work if you don't walk enough (for the summary modal)
-*/
 import React, { useState, useEffect , useRef} from "react";
 import {
   StyleSheet,
